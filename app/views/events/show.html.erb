@@ -1,7 +1,14 @@
 <div class="container">
-  <h1> <%= @event.name %></h1>
-  <p><%= @event.total_price %></p>
-  <% @event.participants.each do |participant|%>
-    <p> <%= participant.first_name %> earns <%= participant.salary %></p>
-    <% end %>
+  <div class="row">
+    <div class="col-xs-12 col-md-10 col-md-offset-1">
+      <h1> <%= @event.name %></h1>
+      <p>The event price: <strong><%= @event.total_price %></strong></p>
+      <p>All your salaries <strong><%= @event.total_salary %></strong> </p>
+      <% @event.participants.each do |participant|%>
+        <p> <%= participant.first_name %> earns <%= participant.salary %> and should pay: <%= participant.participant_should_pay %></p>
+      <% end %>
+    </div>
+  </div>
 </div>
+
+<%#= @event.total_price * (participant.salary/ @event.total_salary).round(2) %>
