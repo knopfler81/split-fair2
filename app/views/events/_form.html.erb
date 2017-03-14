@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <%= simple_form_for @event do |f| %>
+    <div class="col-xs-12">
+      <h3>Your event to share</h3>
+      <%= f.input :name, label: "Event's name" %>
+      <%= f.input :total_price, label: "What is the total price" %>
+      <h3> Add your friends to share the bill</h3>
+      <div id="participants">
+        <%= f.simple_fields_for :participants do |participant| %>
+          <%= render "participants_fields", f: participant %>
+        <% end %>
+        <div class="links">
+          <%= link_to_add_association "add a friend", f, :participants, partial: "participants_fields", class:"btn btn-primary" %>
+        </div>
+      </div>
+        <%= f.button :submit %>
+    </div>
+  <% end %>
+  </div>
+</div>
+
