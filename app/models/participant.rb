@@ -8,6 +8,10 @@ class Participant < ApplicationRecord
     #similar to:
     #event.total_price.to_f * (salary.to_f/event.total_salary.to_f).round(2)
   end
+
+  def percentage
+   (salary.to_f / event.total_salary.to_f * 100).round(2)
+  end
 end
 
 
