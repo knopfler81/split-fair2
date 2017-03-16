@@ -14,8 +14,6 @@ describe "Creating an event", js: true do
 
     find('.nested-fields:nth-child(1)').fill_in "Participant's first name", with: "John"
     find('.nested-fields:nth-child(1)').fill_in "Participant's monthly pay", with: 5600
-    find('.nested-fields:nth-child(1)').fill_in "Participant's first name", with: "Mark"
-    find('.nested-fields:nth-child(1)').fill_in "Participant's monthly pay", with: 3400
     click_button "See result"
 
     expect(page).to have_content('Your salary together:')
