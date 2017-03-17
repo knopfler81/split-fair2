@@ -6,13 +6,18 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
+    @participant = Participant.new
   end
 
   def create
     @event = Event.new(params_event)
-    if @event.save
 
+    if @participant.nil?
+       flash[:alert] = "You need to add participants"
+    end
+    if @event.save
       redirect_to event_path(@event)
+      flash[:notice] = "Event succefully created!"
     else
       render :new
     end

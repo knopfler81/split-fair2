@@ -1,5 +1,8 @@
 class Participant < ApplicationRecord
 
+  validates :first_name, presence: true, length: {minimum: 2}
+  validates :salary, presence: true
+
   belongs_to :event
   default_scope { order(salary: :desc) }
 
