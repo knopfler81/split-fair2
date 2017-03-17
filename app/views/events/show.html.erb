@@ -6,7 +6,7 @@
         <h1 class="title"> <%= @event.name %></h1>
         <br>
         <div class="col-xs-12 col-sm-6">
-          <h3>Your salaries together: <strong>$<%= @event.total_salary %></strong></h3>
+          <h3>Your salary together: <strong>$<%= @event.total_salary %></strong></h3>
         </div>
         <div class="col-xs-12 col-sm-6">
           <h3>The event price: <strong>$<%= @event.total_price %></strong></h3>
@@ -14,7 +14,7 @@
 
       <% @event.participants.each do |participant|%>
         <div class="col-xs-6">
-          <p><%= participant.first_name %> earns <strong>$<%= participant.salary %></strong>it's <strong> <%= participant.percentage %>%</strong></p>
+          <p><%= participant.first_name %> earns <strong>$<%= participant.salary %></strong> it's <strong> <%= participant.percentage %>%</strong></p>
         </div>
         <div class="col-xs-6">
           <p><%= participant.first_name %> should pay: <strong>$<%= participant.participant_should_pay %></strong></p>
