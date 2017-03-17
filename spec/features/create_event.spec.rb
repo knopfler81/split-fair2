@@ -30,7 +30,20 @@ describe "Creating an event", js: true do
 
     expect(page).to have_content('Event succefully created!')
   end
+  it "display an error message if event name is not present" do
+    visit "events/new"
+    fill_in :name, with: ''
+    fill_in "What is the total price", with: 200
 
+    click_link "Add a participant"
+
+    find('.nested-fields:nth-child(1)').fill_in "Participant's first name", with: "John"
+    find('.nested-fields:nth-child(1)').fill_in "Participant's monthly pay", with: 5600
+
+    click_button "See result"
+
+    expect(page).to have_content("Event's name can't be blank")
+  end
   it "display an error message if event name is too short" do
     visit "events/new"
     fill_in :name, with: 'R'
