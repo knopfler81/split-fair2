@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  has_many :participants, inverse_of: :event
+  has_many  :participants, inverse_of: :event
   validates :participants, presence: true
   validates :name, presence: true, length: {minimum: 2}
   validates :total_price, presence: true

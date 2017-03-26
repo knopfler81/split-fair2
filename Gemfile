@@ -9,6 +9,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'redis'
 
+gem 'faker'
+
 gem 'sass-rails'
 gem 'jquery-rails'
 gem 'uglifier'
@@ -21,15 +23,24 @@ gem "cocoon"
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
-  gem 'rspec-rails', '~> 3.5'
-  gem 'capybara'
-  gem 'selenium-webdriver'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
   gem 'listen', '~> 3.0.5'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'capybara-webkit'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
   gem 'simplecov', require: false
+  gem 'webmock'
+
+
+  source 'https://rails-assets.org' do
+    gem "rails-assets-underscore"
+  end
+
 end
 
 
