@@ -99,6 +99,21 @@ describe "Creating an event", js: true do
     expect(page).to have_content("Participant's first name can't be blank")
   end
 
+  it "display an error message if participant first_name is too short" do
+    visit "events/new"
+    fill_in :name, with: 'Rent a plane'
+    fill_in "What is the total price", with: 200
+
+    click_link "Add a participant"
+
+    find('.nested-fields:nth-child(1)').fill_in "Participant's first name", with: "N"
+    find('.nested-fields:nth-child(1)').fill_in "Participant's monthly pay", with: 5600
+
+    click_button "See result"
+
+    expect(page).to have_content("Participant's first name is too short (minimum is 2 characters)")
+  end
+
   it "display an error message if participant salary is not present " do
     visit "events/new"
     fill_in :name, with: 'Rent a plane'
@@ -114,18 +129,5 @@ describe "Creating an event", js: true do
     expect(page).to have_content("Participant's monthly pay can't be blank")
   end
 
-  it "display an error message if participant first_name is too short" do
-    visit "events/new"
-    fill_in :name, with: 'Rent a plane'
-    fill_in "What is the total price", with: 200
 
-    click_link "Add a participant"
-
-    find('.nested-fields:nth-child(1)').fill_in "Participant's first name", with: "N"
-    find('.nested-fields:nth-child(1)').fill_in "Participant's monthly pay", with: 5600
-
-    click_button "See result"
-
-    expect(page).to have_content("Participant's first name is too short (minimum is 2 characters)")
-  end
 end
