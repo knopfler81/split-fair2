@@ -1,19 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/nellyduclos/ROR/split-fair/app/models/user.rb": [
-        1,
-        null,
-        null,
-        1,
-        null,
-        null
-      ],
-      "/Users/nellyduclos/ROR/split-fair/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
       "/Users/nellyduclos/ROR/split-fair/app/helpers/application_helper.rb": [
         1,
         null
@@ -48,6 +35,11 @@
         8,
         null,
         null,
+        null
+      ],
+      "/Users/nellyduclos/ROR/split-fair/app/models/application_record.rb": [
+        1,
+        1,
         null
       ],
       "/Users/nellyduclos/ROR/split-fair/app/models/participant.rb": [
@@ -114,12 +106,10 @@
       "/Users/nellyduclos/ROR/split-fair/app/controllers/application_controller.rb": [
         1,
         1,
-        null,
         null
       ],
       "/Users/nellyduclos/ROR/split-fair/app/controllers/pages_controller.rb": [
         1,
-        null,
         null,
         1,
         null,
@@ -148,6 +138,6 @@
         0
       ]
     },
-    "timestamp": 1490724823
+    "timestamp": 1490730959
   }
 }
