@@ -12,7 +12,7 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(params_event)
 
-    if @participant.nil?
+    if  @event.participants.blank?
        flash[:alert] = "You need to add participants"
     end
     if @event.save
