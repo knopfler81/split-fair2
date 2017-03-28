@@ -3,7 +3,7 @@ class Participant < ApplicationRecord
   validates :first_name, presence: true, length: {minimum: 2}
   validates :salary, presence: true
 
-  belongs_to :event
+  belongs_to :event, optional: true
   default_scope { order(salary: :desc) }
 
   def participant_should_pay
