@@ -14,4 +14,16 @@ describe Participant do
       expect(max.participant_should_pay).to eq(40)
     end
   end
+
+  describe "#percentage" do
+    it "should give the percentage that a participant owes" do
+      john = create(:participant, first_name: "john", salary: 3000)
+      max = create(:participant, first_name: "max", salary: 7000)
+      total_salary = 10000
+      event = create(:event, name: "yolo", total_price: 100, participants: [john, max])
+
+      expect(john.percentage).to eq(30)
+
+    end
+  end
 end
