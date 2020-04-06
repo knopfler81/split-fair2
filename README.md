@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/knopfler81/split-fair2.svg?branch=master)](https://travis-ci.org/knopfler81/split-fair2)
 _The idea of this application comes from an old discussion I had with a dutch man. I told him that it would never be appreciated in France. 
 Whatever! He told me, just do the exercice :)
 So here is the idea..._
