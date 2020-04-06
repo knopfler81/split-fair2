@@ -54,7 +54,6 @@ GEM
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
     builder (3.2.4)
-    byebug (11.0.1)
     cocoon (1.2.14)
     coderay (1.1.2)
     concurrent-ruby (1.1.6)
@@ -107,15 +106,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
-    pg (1.2.3)
-    pry (0.13.0)
-      coderay (~> 1.1)
-      method_source (~> 1.0)
-    pry-byebug (3.7.0)
-      byebug (~> 11.0)
-      pry (~> 0.10)
-    pry-rails (0.3.9)
-      pry (>= 0.10.4)
+    pg (0.18.4)
     public_suffix (4.0.4)
     puma (4.3.3)
       nio4r (~> 2.0)
@@ -233,9 +224,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   listen (~> 3.0.5)
-  pg
-  pry-byebug
-  pry-rails
+  pg (~> 0.18.4)
   puma
   rails (= 5.0.2)
   rails-assets-underscore!
@@ -251,7 +240,7 @@ DEPENDENCIES
   webmock
 
 RUBY VERSION
-   ruby 2.3.3p222
+   ruby 2.6.5p114
 
 BUNDLED WITH
-   1.16.6
+   1.17.2
