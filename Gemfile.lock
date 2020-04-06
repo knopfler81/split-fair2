@@ -83,7 +83,7 @@ GEM
       railties (>= 3.0.0)
     faker (1.7.3)
       i18n (~> 0.5)
-    ffi (1.9.18)
+    ffi (1.12.2)
     figaro (1.1.1)
       thor (~> 0.14)
     font-awesome-sass (4.7.0)
@@ -234,7 +234,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass
-  capybara-webkit
+  capybara-webkit (~> 1.13.0)
   cocoon
   database_cleaner
   factory_girl_rails
